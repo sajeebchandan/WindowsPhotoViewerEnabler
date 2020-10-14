@@ -133,7 +133,11 @@ namespace WindowsPhotoViewerEnabler
 
         private void buttonAbout_Click(object sender, EventArgs e)
         {
-
+            using (About about = new About())
+            {
+                about.StartPosition = FormStartPosition.CenterParent;
+                DialogResult dr = about.ShowDialog();
+            }
         }
     }
 }
